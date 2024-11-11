@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daftar Buku | Aplikasi Buku Favorit</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-900 text-gray-200">
+    <div class="container mx-auto p-4">
+      <h1 class="text-3xl font-bold text-center">Aplikasi Daftar Buku Favorit</h1>
+
+      <div id="session-container" class="bg-gray-800 shadow-md rounded-lg p-4 mt-4">
+        <div class="name-input-group mb-4">
+          <input type="text" id="namaPengguna" placeholder="Masukkan Nama Anda" class="border border-gray-600 rounded p-2 w-full bg-gray-700 text-gray-200" />
+          <button id="btnSimpanNama" class="bg-blue-600 text-white rounded p-2 mt-2 hover:bg-blue-500">Simpan Nama</button>
+        </div>
+        <h3 id="salamPengguna" class="text-lg"></h3>
+      </div>
+
+      <form id="form-tambah-buku" class="bg-gray-800 shadow-md rounded-lg p-4 mt-4">
+        <h2 class="text-xl font-semibold mb-2">Tambah Buku</h2>
+        <div class="form-group mb-4">
+          <input type="text" id="judul" placeholder="Judul Buku" required class="border border-gray-600 rounded p-2 w-full bg-gray-700 text-gray-200" />
+        </div>
+        <div class="form-group mb-4">
+          <input type="text" id="penulis" placeholder="Penulis" required class="border border-gray-600 rounded p-2 w-full bg-gray-700 text-gray-200" />
+        </div>
+        <div class="form-group mb-4">
+          <input type="number" id="tahun" placeholder="Tahun Terbit" required class="border border-gray-600 rounded p-2 w-full bg-gray-700 text-gray-200" />
+        </div>
+        <button type="submit" class="bg-green-600 text-white rounded p-2 hover:bg-green-500">Tambah Buku</button>
+      </form>
+
+      <section class="bg-gray-800 shadow-md rounded-lg p-4 mt-4">
+        <h2 class="text-xl font-semibold mb-2">Daftar Buku</h2>
+        <div id="daftar-buku" class="book-list"></div>
+      </section>
+
+      <section class="bg-gray-800 shadow-md rounded-lg p-4 mt-4">
+        <h2 class="text-xl font-semibold mb-2">Buku Favorit</h2>
+        <div id="buku-favorit" class="book-favorites"></div>
+      </section>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
